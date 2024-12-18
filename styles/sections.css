@@ -21,7 +21,6 @@ section header {
 }
 
 #featured {
-
     grid-area: featured;
 
     img {
@@ -59,11 +58,11 @@ section header {
 }
 
 #weekly {
-
     grid-area: weekly;
 
     &>div {
         grid-template-columns: repeat(4, 292px);
+        justify-content: space-between;
     }
 
     img {
@@ -86,8 +85,11 @@ section header {
 }
 
 #ai {
-
     grid-area: ai;
+
+    & > div {
+        grid-auto-rows: 176px;
+    }
 
     img {
         width: 176px;
@@ -102,18 +104,21 @@ section header {
 
 aside {
     grid-area: aside;
+    gap: 32px;
 }
 
 #ads img {
-    width: 488px;
-    height: 280px;
-
+    border-radius: 4px;
 }
+
 #more {
-    margin-top: 32px;
+    & > div {
+        grid-auto-rows: 72px;
+    }
 
     div > h3 {
         margin-top: 8px;
+        font-size: 15px;
     }
 
     img {
